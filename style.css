@@ -1,0 +1,96 @@
+.contaner{
+    background-color: white;
+    display: grid;
+    height: 100vh;
+    grid-template: repeat(3, 33fr) / repeat(3, 33fr);
+    grid-template-areas: "sidebar header header"
+                         "sidebar gallery gallery"
+                         "sidebar gallery gallery";
+}
+.sidebar{grid-area: sidebar;}
+.sidebar-item {
+    display: flex;
+    flex-direction: column;
+}
+.t1{color: black;}
+h5{font-weight: lighter;
+line-height:1px;}
+.header{
+    background-color: darkgrey;
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding:7rem 0 7rem 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+img {
+    width: 99%;
+    margin: 0.2rem 0 0.2rem 0;
+}
+
+.text {
+    width: 75%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.text2 {
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.gallery{
+    grid-area: gallery;
+    display: grid;
+    grid-template: repeat(2, 50fr)/repeat(2, 50fr);
+    align-items: stretch;
+    justify-items: stretch;
+    justify-content: stretch;
+    align-content: stretch;
+}
+.icon {
+    width: 4%;
+    background-color: grey;
+    padding: 7px;
+    border-radius: 100px;
+    display: inline;}
+@media screen and (min-width: 200px) and (max-width: 500px) {
+    .container {
+        display: grid;
+        grid-template: repeat(10, 12.5fr) / 100%;
+        grid-template-areas: "header" "header" "header" "header" "gallery" "gallery" "gallery" "gallery";
+    }
+    .sidebar {
+        display: none;
+    }
+    .gallery {
+        grid-area: gallery;
+        display: grid;
+        grid-template: repeat(4, 50fr) / 100%;
+        justify-content: stretch;
+        justify-items: stretch;
+        align-content: stretch;
+        align-items: stretch;
+
+    }
+
+    .text {
+        width: 75%;
+        font-size: 20px;
+    }
+    .text2 {
+        font-size: 11px;
+        font-weight: normal;
+    }
+    .icon {
+        visibility: visible;
+        align-self: flex-end;
+        font-size: 30px;
+        margin: 5px;
+    }
+}
